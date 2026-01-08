@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
-import SignupPage from "./pages/SignupPage";
+import SignupPage from "./pages/SignUpPage";
 
 
 const App = () => {
