@@ -78,10 +78,11 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
   try {
     // Delete the JWT cookie
-    res.clearCookie("jwt", {
+    res.cookie("jwt", {
+       maxAge: 0,  
       httpOnly: true,
       secure: true, // only works on HTTPS
-      sameSite: "lax",
+      sameSite: "None",
       path: "/",    // must match the path used when setting cookie
     });
 
@@ -124,3 +125,4 @@ export const checkAuth = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
